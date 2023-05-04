@@ -61,7 +61,7 @@ class Accountsettings : AppCompatActivity() {
         mTask.addOnSuccessListener {
             Toast.makeText(this,"Employee data deleted",Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, FetchingActivity::class.java)
+            val intent = Intent(this, FetActivity1::class.java)
             finish()
             startActivity(intent)
 

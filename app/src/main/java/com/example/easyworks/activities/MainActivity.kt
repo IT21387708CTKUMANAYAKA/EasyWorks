@@ -8,7 +8,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.easyworks.R
+
+import com.example.easyworkscrud.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnFetchReview.setOnClickListener {
-            val intent = Intent(this, FetchingActivity1::class.java)
+            val intent = Intent(this, FetchingAct::class.java)
             startActivity(intent)
         }
 

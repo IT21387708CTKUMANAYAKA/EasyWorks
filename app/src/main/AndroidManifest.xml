@@ -15,7 +15,7 @@
             android:name="com.example.easyworks.activities.CustomerDetailsActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.easyworks.activities.FetchingActivity1"
+            android:name="com.example.easyworks.activities.FetchingAct"
             android:exported="false" />
         <activity
             android:name="com.example.easyworks.activities.InsertionActivity"
@@ -39,7 +39,7 @@
         <activity android:name="com.example.easyworks.activities.Accountsettings"></activity>
         <activity android:name="com.example.easyworks.activities.Notification"></activity>
         <activity android:name="com.example.easyworks.activities.TestSingin"></activity>
-        <activity android:name="com.example.easyworks.activities.FetchingActivity"></activity>
+        <activity android:name="com.example.easyworks.activities.FetActivity1"></activity>
     </application>
 
 </manifest>

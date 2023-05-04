@@ -53,7 +53,7 @@ class CustomerDetailsActivity : AppCompatActivity() {
         mTask.addOnSuccessListener {
             Toast.makeText(this, "Customer data Deleted", Toast.LENGTH_LONG).show()
             //after delete redirected to fetching activity
-            val intent = Intent(this, FetchingActivity1::class.java)
+            val intent = Intent(this, FetchingAct::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener{ error->
