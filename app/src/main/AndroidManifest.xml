@@ -40,6 +40,48 @@
         <activity android:name="com.example.easyworks.activities.Notification"></activity>
         <activity android:name="com.example.easyworks.activities.TestSingin"></activity>
         <activity android:name="com.example.easyworks.activities.FetActivity1"></activity>
+
+        <activity
+            android:name="com.example.easyworks.activities.Service_Notification"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".Notification"
+            android:enabled="true" />
+
+        <activity
+            android:name=".ViewAllServices"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ServiceDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".addService"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
     </application>
 
 </manifest>
