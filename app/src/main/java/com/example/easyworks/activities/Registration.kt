@@ -49,7 +49,7 @@ class Registration : AppCompatActivity() {
         regbutton = findViewById(R.id.regibutton1)
 
 
-        dbrefEmp = FirebaseDatabase.getInstance().getReference("Employees")
+        dbrefEmp = FirebaseDatabase.getInstance().getReference("users")
 
         regbutton.setOnClickListener{
             saveEmployeeData()

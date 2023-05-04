@@ -34,6 +34,12 @@ class ViewServices: AppCompatActivity() {
 
         var ratingbtn = findViewById<ImageButton>(R.id.ratingnotselbtn)
         ratingbtn.setOnClickListener({
+            val intent = Intent(this, FetchingAct::class.java)
+            startActivity(intent)
+        })
+
+        var profbtn = findViewById<ImageButton>(R.id.profilenotselbtn)
+        profbtn.setOnClickListener({
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         })

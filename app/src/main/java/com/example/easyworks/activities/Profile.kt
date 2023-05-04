@@ -3,6 +3,7 @@ package com.example.easyworks.activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
@@ -66,6 +67,24 @@ class Profile : AppCompatActivity() {
             val intent = Intent(this, UpdateLoginpassword::class.java)
             startActivity(intent)
         }
+
+        var homebtn = findViewById<ImageButton>(R.id.homenotselserv)
+        homebtn.setOnClickListener({
+            val intent = Intent(this, ViewServices::class.java)
+            startActivity(intent)
+        })
+
+        var ratbtn = findViewById<ImageButton>(R.id.ratingnotselserv)
+        ratbtn.setOnClickListener({
+            val intent = Intent(this, FetchingAct::class.java)
+            startActivity(intent)
+        })
+
+        var servicebtn = findViewById<ImageButton>(R.id.servicenotselbtn)
+        servicebtn.setOnClickListener({
+            val intent = Intent(this, addService::class.java)
+            startActivity(intent)
+        })
 
     }
 

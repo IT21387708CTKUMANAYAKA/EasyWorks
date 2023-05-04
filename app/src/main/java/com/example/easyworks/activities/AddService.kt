@@ -49,6 +49,20 @@ class addService : AppCompatActivity() {
             startActivity(intent)
         })
 
+        var ratbtn = findViewById<ImageButton>(R.id.ratingnotselserv)
+        ratbtn.setOnClickListener({
+            val intent = Intent(this, FetchingAct::class.java)
+            startActivity(intent)
+        })
+
+        var profbtn = findViewById<ImageButton>(R.id.profilenotselserv)
+        profbtn.setOnClickListener({
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        })
+
+
+
 
 
         serviceproname = findViewById(R.id.spname)
