@@ -30,6 +30,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.Login"></activity>
+        <activity android:name=".activities.Registration"></activity>
+        <activity android:name=".activities.Profile"></activity>
+        <activity android:name=".activities.UpdateLoginpassword"></activity>
+        <activity android:name=".activities.SignupActivity"></activity>
+        <activity android:name=".activities.Accountsettings"></activity>
+        <activity android:name=".activities.Notification"></activity>
+        <activity android:name=".activities.TestSingin"></activity>
+        <activity android:name=".activities.FetchingActivity"></activity>
     </application>
 
 </manifest>
