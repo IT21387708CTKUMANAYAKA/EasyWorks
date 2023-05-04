@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C43F51B5"
-    tools:context="com.example.easyworks.activities.ViewAllServices">
+    tools:context="com.example.easyworks.activities.ViewServices">
 
 
     <ScrollView

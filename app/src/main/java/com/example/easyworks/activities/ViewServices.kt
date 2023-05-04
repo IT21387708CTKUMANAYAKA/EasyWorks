@@ -32,6 +32,12 @@ class ViewServices: AppCompatActivity() {
             startActivity(intent)
         })
 
+        var ratingbtn = findViewById<ImageButton>(R.id.ratingnotselbtn)
+        ratingbtn.setOnClickListener({
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        })
+
 
         serviceRecyclerView = findViewById(R.id.recyclerView)
         serviceRecyclerView.layoutManager = LinearLayoutManager(this)
