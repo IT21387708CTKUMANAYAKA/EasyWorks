@@ -1,4 +1,4 @@
-package com.example.easyworks.activity
+package com.example.easyworks.activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -9,7 +9,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.easyworks.models.EmployeeModel
-import com.example.easyworks.R
+
+import com.example.easyworkscrud.R
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -124,22 +125,6 @@ class Registration : AppCompatActivity() {
     }
 
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.mainmenu1, menu)
-        return true
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle item selection
-        return when (item.itemId) {
-            R.id.dashboard -> {
-                dashboard1()
-                true
-            }
-
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
 
 }
 //

@@ -1,4 +1,4 @@
-package com.example.easyworks.activity
+package com.example.easyworks.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,8 +8,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.easyworks.R
+
+
 import com.example.easyworks.models.Users
+import com.example.easyworkscrud.R
 import com.google.firebase.database.FirebaseDatabase
 
 
@@ -59,7 +61,7 @@ class Accountsettings : AppCompatActivity() {
         mTask.addOnSuccessListener {
             Toast.makeText(this,"Employee data deleted",Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this,FetchingActivity::class.java)
+            val intent = Intent(this, FetchingActivity::class.java)
             finish()
             startActivity(intent)
 

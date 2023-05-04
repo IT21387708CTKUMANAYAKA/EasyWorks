@@ -1,40 +1,36 @@
-package com.example.easyworkscrud.activities
+package com.example.easyworks.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+import com.example.easyworks.adapters.CusAdapter
+import com.example.easyworks.models.CustomerModel
 import com.example.easyworkscrud.R
-import com.example.easyworkscrud.adapters.CusAdapter
-import com.example.easyworkscrud.models.CustomerModel
 import com.google.firebase.database.*
 
-class FetchingActivity1 : AppCompatActivity() {
-
+class FetchingAct : AppCompatActivity() {
     private lateinit var cusRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
     private lateinit var cusList: ArrayList<CustomerModel>
     private lateinit var dbRef: DatabaseReference
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fetching)
+        setContentView(R.layout.activity_fetching1)
 
-        cusRecyclerView = findViewById(R.id.rvCus)
+        cusRecyclerView = findViewById(R.id.rvCu)
         cusRecyclerView.layoutManager = LinearLayoutManager(this)
         cusRecyclerView.setHasFixedSize(true)
-        tvLoadingData = findViewById(R.id.tvLoadingData)
+        tvLoadingData = findViewById(R.id.tvLoadingDat)
 
         cusList = arrayListOf<CustomerModel>()
 
         getCustomersData()
 
     }
-
     private fun getCustomersData() {
 
         cusRecyclerView.visibility = View.GONE
@@ -53,19 +49,19 @@ class FetchingActivity1 : AppCompatActivity() {
                     val mAdapter = CusAdapter(cusList)
                     cusRecyclerView.adapter = mAdapter
 
-                mAdapter.setOnItemClickListener(object : CusAdapter.onItemClickListener{
-                    override fun onItemClick(position: Int) {
-                        val intent = Intent(this@FetchingActivity1, CustomerDetailsActivity::class.java)
+                    mAdapter.setOnItemClickListener(object : CusAdapter.onItemClickListener{
+                        override fun onItemClick(position: Int) {
+                            val intent = Intent(this@FetchingAct, CustomerDetailsActivity::class.java)
 
-                        //put extras
-                        intent.putExtra("cusId",cusList[position].cusId)
-                        intent.putExtra("cusName",cusList[position].cusName)
-                        intent.putExtra("cusEmail",cusList[position].cusEmail)
-                        intent.putExtra("cusReview",cusList[position].cusReview)
-                        startActivity(intent)
-                    }
+                            //put extras
+                            intent.putExtra("cusId",cusList[position].cusId)
+                            intent.putExtra("cusName",cusList[position].cusName)
+                            intent.putExtra("cusEmail",cusList[position].cusEmail)
+                            intent.putExtra("cusReview",cusList[position].cusReview)
+                            startActivity(intent)
+                        }
 
-                })
+                    })
 
 
                     cusRecyclerView.visibility = View.VISIBLE

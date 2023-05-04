@@ -1,4 +1,4 @@
-package com.example.easyworkscrud
+package com.example.easyworks
 
 import org.junit.Test
 

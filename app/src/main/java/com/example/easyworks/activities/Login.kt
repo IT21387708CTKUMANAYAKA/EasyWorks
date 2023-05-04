@@ -1,15 +1,12 @@
-package com.example.easyworks.activity
+package com.example.easyworks.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.widget.Toast
-import com.example.easyworks.R
-import com.example.easyworks.databinding.LoginpageBinding
+
+import com.example.easyworkscrud.databinding.LoginpageBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class Login : AppCompatActivity() {
@@ -56,22 +53,6 @@ class Login : AppCompatActivity() {
     }
 
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.mainmenu1, menu)
-        return true
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle item selection
-        return when (item.itemId) {
-            R.id.dashboard -> {
-                dashboard1()
-                true
-            }
-
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
 
 }

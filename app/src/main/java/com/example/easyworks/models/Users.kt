@@ -1,4 +1,4 @@
-package com.example.easyworkscrud.models
+package com.example.easyworks.models
 
 class Users (
 

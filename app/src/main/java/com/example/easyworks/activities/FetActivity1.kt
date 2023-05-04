@@ -1,5 +1,6 @@
-package com.example.easyworks.activity
+package com.example.easyworks.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -7,31 +8,30 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.easyworks.R
 import com.example.easyworks.adapters.EmpAdapter
 import com.example.easyworks.models.Users
+import com.example.easyworkscrud.R
 import com.google.firebase.database.*
 
-class FetchingActivity: AppCompatActivity() {
-
+class FetActivity1 : AppCompatActivity() {
     private lateinit var empRecyclerview : RecyclerView
     private lateinit var tvLoadingData: TextView
     private lateinit var empList: ArrayList<Users>
     private lateinit var dbRef: DatabaseReference
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fetchingview)
+        setContentView(R.layout.fetchingview1)
 
-        empRecyclerview = findViewById(R.id.rvEmp)
+        empRecyclerview = findViewById(R.id.empfet)
         empRecyclerview.layoutManager = LinearLayoutManager(this)
         empRecyclerview.setHasFixedSize(true)
-        tvLoadingData = findViewById(R.id.tvLoadingData)
+        tvLoadingData = findViewById(R.id.LoadingDatafet)
 
         empList = arrayListOf<Users>()
 
         getEmployeeData()
-
     }
     private fun getEmployeeData(){
         empRecyclerview.visibility = View.GONE
@@ -39,7 +39,7 @@ class FetchingActivity: AppCompatActivity() {
 
         dbRef = FirebaseDatabase.getInstance().getReference("users")
 
-        dbRef.addValueEventListener(object : ValueEventListener{
+        dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 empList.clear()
                 if(snapshot.exists()){
@@ -52,7 +52,7 @@ class FetchingActivity: AppCompatActivity() {
 
                     mAdapter.setOnItemClickListener(object : EmpAdapter.onItemClickListener {
                         override fun onItemClick(position: Int) {
-                            val intent = Intent(this@FetchingActivity,Accountsettings::class.java)
+                            val intent = Intent(this@FetActivity1, Accountsettings::class.java)
 
                             //put extras
                             //intent.putExtra("uid",empList[position].uid)
@@ -65,7 +65,6 @@ class FetchingActivity: AppCompatActivity() {
                             startActivity(intent)
 
                         }
-
                     })
 
                     empRecyclerview.visibility = View.VISIBLE

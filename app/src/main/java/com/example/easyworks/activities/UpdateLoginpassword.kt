@@ -1,4 +1,4 @@
-package com.example.easyworks.activity
+package com.example.easyworks.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,8 @@ import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.easyworks.R
-import com.example.easyworks.databinding.ProfilepageBinding
 
-import com.example.easyworks.databinding.UpdatepasswordBinding
+import com.example.easyworkscrud.databinding.UpdatepasswordBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -29,7 +27,7 @@ class UpdateLoginpassword : AppCompatActivity() {
         binding.updateemail1.setOnClickListener {
             val user = auth.currentUser
             val email = binding.updateloginemail.text.toString()
-            val password = binding.updateloginpassword.text.toString()
+
 
             if (checkEmailField()){
                 user?.updateEmail(email)?.addOnCompleteListener {

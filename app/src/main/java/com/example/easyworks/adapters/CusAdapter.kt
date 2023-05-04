@@ -1,4 +1,4 @@
-package com.example.easyworkscrud.adapters
+package com.example.easyworks.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+
+import com.example.easyworks.models.CustomerModel
 import com.example.easyworkscrud.R
-import com.example.easyworkscrud.models.CustomerModel
 
 
 class CusAdapter (private val cusList : ArrayList<CustomerModel>) : RecyclerView.Adapter<CusAdapter.ViewHolder>(){

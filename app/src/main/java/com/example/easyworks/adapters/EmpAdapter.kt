@@ -1,4 +1,4 @@
-package com.example.easyworkscrud.adapters
+package com.example.easyworks.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 
+
+import com.example.easyworks.models.Users
 import com.example.easyworkscrud.R
-import com.example.easyworkscrud.models.Users
 
 class EmpAdapter(private val empList: ArrayList<Users>):RecyclerView.Adapter<EmpAdapter.ViewHolder>(){
 

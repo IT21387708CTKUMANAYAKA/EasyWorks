@@ -1,14 +1,13 @@
-package com.example.easyworkscrud.activities
+package com.example.easyworks.activities
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
+
+import com.example.easyworks.models.CustomerModel
 import com.example.easyworkscrud.R
-import com.example.easyworkscrud.models.CustomerModel
 
 
 import com.google.firebase.database.DatabaseReference

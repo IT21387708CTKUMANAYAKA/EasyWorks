@@ -1,9 +1,10 @@
-package com.example.easyworks.activity
+package com.example.easyworks.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+
 
 
 import com.example.easyworkscrud.databinding.SignupActivityBinding

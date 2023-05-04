@@ -1,8 +1,9 @@
-package com.example.easyworks.activity
+package com.example.easyworks.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.easyworks.R
+
+import com.example.easyworkscrud.R
 
 class Notification : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
