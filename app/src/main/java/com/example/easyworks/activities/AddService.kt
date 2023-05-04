@@ -45,7 +45,7 @@ class addService : AppCompatActivity() {
 
         var homebtn = findViewById<ImageButton>(R.id.homenotselserv)
         homebtn.setOnClickListener({
-            val intent = Intent(this, ViewAllServices::class.java)
+            val intent = Intent(this, ViewServices::class.java)
             startActivity(intent)
         })
 
