@@ -52,31 +52,27 @@
         </activity>
 
         <receiver
-            android:name=".Notification"
+            android:name="com.example.easyworks.activities.Notification1"
             android:enabled="true" />
 
         <activity
-            android:name=".ViewAllServices"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name="com.example.easyworks.activities.ViewServices"
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ServiceDetailsActivity"
+            android:name="com.example.easyworks.activities.ServiceDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".addService"
+            android:name="com.example.easyworks.activities.addService"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
