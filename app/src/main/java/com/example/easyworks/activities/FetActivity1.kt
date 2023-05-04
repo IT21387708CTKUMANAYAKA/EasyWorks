@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,6 +24,30 @@ class FetActivity1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fetchingview1)
+
+
+        val home = findViewById<ImageButton>(R.id.homenotselser)
+        home.setOnClickListener {
+            val intent = Intent(this, ViewServices::class.java)
+            startActivity(intent)
+        }
+        val servicebutton = findViewById<ImageButton>(R.id.serviceselser)
+        servicebutton.setOnClickListener {
+            val intent = Intent(this, addService::class.java)
+            startActivity(intent)
+        }
+        val ratingbutton = findViewById<ImageButton>(R.id.ratingnotselser)
+        ratingbutton.setOnClickListener {
+            val intent = Intent(this, FetchingAct::class.java)
+            startActivity(intent)
+        }
+        val profilebutton = findViewById<ImageButton>(R.id.profilenotselserv)
+        profilebutton.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        }
+
+
 
         empRecyclerview = findViewById(R.id.empfet)
         empRecyclerview.layoutManager = LinearLayoutManager(this)

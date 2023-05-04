@@ -67,24 +67,24 @@ class Profile : AppCompatActivity() {
             val intent = Intent(this, UpdateLoginpassword::class.java)
             startActivity(intent)
         }
-
-        var homebtn = findViewById<ImageButton>(R.id.homenotselserv)
-        homebtn.setOnClickListener({
+        val home = findViewById<ImageButton>(R.id.homenotselser)
+        home.setOnClickListener {
             val intent = Intent(this, ViewServices::class.java)
             startActivity(intent)
-        })
-
-        var ratbtn = findViewById<ImageButton>(R.id.ratingnotselserv)
-        ratbtn.setOnClickListener({
-            val intent = Intent(this, FetchingAct::class.java)
-            startActivity(intent)
-        })
-
-        var servicebtn = findViewById<ImageButton>(R.id.servicenotselbtn)
-        servicebtn.setOnClickListener({
+        }
+        val servicebutton = findViewById<ImageButton>(R.id.serviceselser)
+        servicebutton.setOnClickListener {
             val intent = Intent(this, addService::class.java)
             startActivity(intent)
-        })
+        }
+        val ratingbutton = findViewById<ImageButton>(R.id.ratingnotselser)
+        ratingbutton.setOnClickListener {
+            val intent = Intent(this, FetchingAct::class.java)
+            startActivity(intent)
+        }
+
+
+
 
     }
 

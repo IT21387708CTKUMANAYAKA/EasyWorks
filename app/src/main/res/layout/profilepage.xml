@@ -156,7 +156,7 @@
             app:srcCompat="@drawable/wave__9_" />
 
         <ImageButton
-            android:id="@+id/homenotselserv"
+            android:id="@+id/homenotselser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -170,7 +170,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/ratingnotselserv"
+            android:id="@+id/ratingnotselser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="334dp"
@@ -206,7 +206,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/serviceselserv"
+            android:id="@+id/serviceselser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="98dp"

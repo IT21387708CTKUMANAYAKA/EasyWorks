@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:background="#6F3F51B5"
     android:orientation="vertical"
-    tools:context=".ServiceDetailsActivity">
+    tools:context="com.example.easyworks.activities.ServiceDetailsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="417dp"

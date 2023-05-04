@@ -3,6 +3,7 @@ package com.example.easyworks.activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,6 +21,23 @@ class FetchingAct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fetching1)
+
+        val home = findViewById<ImageButton>(R.id.homenotselserv)
+        home.setOnClickListener {
+            val intent = Intent(this, ViewServices::class.java)
+            startActivity(intent)
+        }
+        val servicebutton = findViewById<ImageButton>(R.id.serviceselserv)
+        servicebutton.setOnClickListener {
+            val intent = Intent(this, addService::class.java)
+            startActivity(intent)
+        }
+        val profilebutton = findViewById<ImageButton>(R.id.profilenotselserv)
+        profilebutton.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        }
+
 
         cusRecyclerView = findViewById(R.id.rvCu)
         cusRecyclerView.layoutManager = LinearLayoutManager(this)

@@ -36,6 +36,16 @@ private lateinit var tvSerId: TextView
             val intent = Intent(this, ViewServices::class.java)
             startActivity(intent)
         })
+        var profilebtn = findViewById<ImageButton>(R.id.profnotselbtn)
+        profilebtn.setOnClickListener({
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        })
+        var ratebtn = findViewById<ImageButton>(R.id.ratenotselbtn)
+        ratebtn.setOnClickListener({
+            val intent = Intent(this, FetchingAct::class.java)
+            startActivity(intent)
+        })
 
 
 
