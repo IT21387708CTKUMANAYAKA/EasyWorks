@@ -63,7 +63,7 @@ class addService : AppCompatActivity() {
 
         var notifypagebtn2 = findViewById<ImageButton>(R.id.notifynotselserv)
         notifypagebtn2.setOnClickListener({
-            val intent = Intent(this, FetchingAct::class.java)
+            val intent = Intent(this, FetchAllNotifications::class.java)
             startActivity(intent)
         })
 
