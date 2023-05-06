@@ -59,7 +59,7 @@ class Profile : AppCompatActivity() {
 
         val accountnotifi = findViewById<AppCompatButton>(R.id.notificationbutton)
         accountnotifi.setOnClickListener {
-            val notifiprofile = Intent(this, Notification::class.java)
+            val notifiprofile = Intent(this, Notification1::class.java)
             startActivity(notifiprofile)
         }
         val updatepass = findViewById<AppCompatButton>(R.id.updatebutton)
