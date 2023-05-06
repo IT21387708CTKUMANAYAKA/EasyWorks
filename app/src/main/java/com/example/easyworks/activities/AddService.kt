@@ -3,6 +3,7 @@ package com.example.easyworks.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -110,13 +111,11 @@ class addService : AppCompatActivity() {
 
 
 
-
-
         if(name.isEmpty()){
-            servicename.error = "Please enter service name"
+            serviceproname.error = "Please enter service name"
         }
         if(phone.isEmpty()){
-            servicename.error = "Please enter service name"
+            serviceprocontact.error = "Please enter service name"
         }
         if(email.isEmpty()){
             servicename.error = "Please enter service name"
@@ -131,6 +130,12 @@ class addService : AppCompatActivity() {
            }*/
         if(price.isEmpty()){
             Sprice.error = "Please enter Price"
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            serviceproemail.error = "Please enter a valid email address"
+            serviceproemail.requestFocus()
+            return
         }
 
         //set an unique id

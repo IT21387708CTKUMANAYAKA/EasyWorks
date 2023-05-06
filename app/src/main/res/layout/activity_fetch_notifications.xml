@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ececec"
+    android:background="#003F51B5"
     android:orientation="vertical"
     tools:context="com.example.easyworks.activities.FetchNotifications">
 
@@ -60,7 +60,7 @@
             android:backgroundTint="#03FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_account_circle_24_notsel"
+            app:srcCompat="@drawable/ic_baseline_account_circle_24"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
@@ -93,8 +93,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="417dp"
-        android:layout_height="600dp"
+        android:layout_width="395dp"
+        android:layout_height="261dp"
         android:layout_marginTop="1dp"
         android:contentDescription="@string/appbar_scrolling_view_behavior"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,16 +126,14 @@
                     app:srcCompat="@drawable/profilepic" /> -->
 
                 <RelativeLayout
-                    android:layout_width="356dp"
-                    android:layout_height="266dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="362dp"
+                    android:layout_height="244dp"
 
                     android:orientation="vertical"
 
                     tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="45dp"
-                    tools:layout_editor_absoluteY="36dp">
+                    tools:layout_editor_absoluteX="24dp"
+                    tools:layout_editor_absoluteY="16dp">
 
 
                     <TextView
@@ -170,8 +168,8 @@
 
                     <TextView
                         android:id="@+id/tvname"
-                        android:layout_width="339dp"
-                        android:layout_height="100dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="82dp"
 
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="150dp"
@@ -191,13 +189,23 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="388dp"
-        android:layout_height="212dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="166dp"
+        android:layout_width="349dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="156dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/notification_on_smartphone_vector_45940103" />
+
+    <Button
+        android:id="@+id/getservicebtn1"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="272dp"
+        android:text="Get Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

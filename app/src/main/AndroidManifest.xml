@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -36,7 +38,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.easyworks.activities.MainActivity" />
+
         <activity android:name="com.example.easyworks.activities.Login" />
         <activity android:name="com.example.easyworks.activities.Registration" />
         <activity android:name="com.example.easyworks.activities.Profile" />
@@ -80,7 +82,13 @@
                 android:value="" />
         </activity>
         <activity android:name="com.example.easyworks.activities.FetchAllNotifications" />
-
+        <activity
+            android:name="com.example.easyworks.activities.GetService"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
     </application>
 
 </manifest>

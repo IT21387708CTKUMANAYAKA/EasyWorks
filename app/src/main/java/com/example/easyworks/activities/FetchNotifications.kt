@@ -45,11 +45,11 @@ class FetchNotifications : AppCompatActivity() {
             startActivity(intent)
         })
 
-
-
-
-
-
+        var contactpg = findViewById<Button>(R.id.getservicebtn1)
+        contactpg.setOnClickListener({
+            val intent = Intent(this, GetService::class.java)
+            startActivity(intent)
+        })
 
 
         initView()
