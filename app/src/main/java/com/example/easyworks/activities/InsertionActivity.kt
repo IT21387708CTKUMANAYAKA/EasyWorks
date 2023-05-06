@@ -1,5 +1,6 @@
 package com.example.easyworks.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -72,6 +73,10 @@ private fun saveCustomerData() {
             etCusName.text.clear()
             etCusEmail.text.clear()
             etCusReview.text.clear()
+
+            val intent = Intent(this, FetchingAct::class.java)
+           // finish()
+            startActivity(intent)
 
 
         }.addOnFailureListener { err ->

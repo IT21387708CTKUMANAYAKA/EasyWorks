@@ -83,6 +83,12 @@ class Profile : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val notifybtn = findViewById<ImageButton>(R.id.notifynotselserv)
+        notifybtn.setOnClickListener {
+            val intent = Intent(this, FetchAllNotifications::class.java)
+            startActivity(intent)
+        }
+
 
 
 

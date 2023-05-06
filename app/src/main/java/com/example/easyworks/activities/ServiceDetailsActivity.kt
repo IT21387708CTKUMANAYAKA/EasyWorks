@@ -47,6 +47,12 @@ private lateinit var tvSerId: TextView
             startActivity(intent)
         })
 
+        var ratepagebtn = findViewById<TextView>(R.id.tvrate)
+        ratepagebtn.setOnClickListener({
+            val intent = Intent(this, InsertionActivity::class.java)
+            startActivity(intent)
+        })
+
 
 
 

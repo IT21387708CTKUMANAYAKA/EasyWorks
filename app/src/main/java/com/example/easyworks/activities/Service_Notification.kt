@@ -7,9 +7,12 @@ import android.content.Context
 import android.os.Build
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.example.easyworks.models.NotificationModel
 import com.example.easyworkscrud.R
 
 import com.example.easyworkscrud.databinding.ActivityServiceNotificationBinding
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import java.util.*
 
 class Service_Notification : AppCompatActivity()
@@ -18,6 +21,7 @@ class Service_Notification : AppCompatActivity()
 
 
     private lateinit var binding : ActivityServiceNotificationBinding
+    private lateinit var database: DatabaseReference
 
 
 
@@ -31,6 +35,9 @@ class Service_Notification : AppCompatActivity()
         binding = ActivityServiceNotificationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Initialize Firebase Database
+        database = FirebaseDatabase.getInstance().reference
+
         createNotificationChannel()
         binding.notifysendbtn.setOnClickListener { scheduleNotification() }
 
@@ -42,13 +49,13 @@ class Service_Notification : AppCompatActivity()
 
     private fun scheduleNotification()
     {
-        val intent = Intent(applicationContext, Notification::class.java)
+        val intent = Intent(applicationContext, Notification1::class.java)
         val title = binding.notifyTitle.text.toString()
         val category = binding.notifyCat.text.toString()
-        val notifyDescrip = binding.notifydesc.text.toString()
+        val description = binding.notifydesc.text.toString()
         intent.putExtra(titleExtra, title)
         intent.putExtra(messageExtra, category)
-        intent.putExtra(descriptionExtra,notifyDescrip)
+        intent.putExtra(descriptionExtra,description)
 
         val pendingIntent = PendingIntent.getBroadcast(applicationContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
 
@@ -58,17 +65,24 @@ class Service_Notification : AppCompatActivity()
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pendingIntent)
 
-        showAlert(title, category,notifyDescrip)
+        // Store notification to Firebase Database
+        val id = database.child("NotificationData").push().key
+        val notification = NotificationModel(id, title, category, description)
+        if (id != null) {
+            database.child("Notifications").child(id).setValue(notification)
+        }
+
+        showAlert(title, category,description)
     }
 
-    private fun showAlert(title: String, category: String, notifyDescrip: String)
+    private fun showAlert(title: String, category: String, description: String)
     {
 
         AlertDialog.Builder(this)
             .setTitle("Notification Scheduled")
             .setMessage(
                 "Title: " + title +
-                        "\nMessage: " + category +"\nDescription: " + notifyDescrip )
+                        "\nMessage: " + category +"\nDescription: " + description )
             .setPositiveButton("Okay"){_,_ ->}
             .show()
     }

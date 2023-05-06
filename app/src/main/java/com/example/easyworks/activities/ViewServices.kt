@@ -45,6 +45,13 @@ class ViewServices: AppCompatActivity() {
         })
 
 
+        var notifypagebtn = findViewById<ImageButton>(R.id.notifynotselbtn)
+        notifypagebtn.setOnClickListener({
+            val intent = Intent(this, FetchAllNotifications::class.java)
+            startActivity(intent)
+        })
+
+
         serviceRecyclerView = findViewById(R.id.recyclerView)
         serviceRecyclerView.layoutManager = LinearLayoutManager(this)
         serviceRecyclerView.setHasFixedSize(true)

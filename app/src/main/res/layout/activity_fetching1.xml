@@ -74,7 +74,7 @@
             android:backgroundTint="#00FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_stars_24"
+            app:srcCompat="@drawable/ic_baseline_stars_24_sel"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
@@ -86,7 +86,7 @@
             android:backgroundTint="#03FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_account_circle_24"
+            app:srcCompat="@drawable/ic_baseline_account_circle_24_notsel"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
@@ -112,7 +112,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_support_agent_24"
+            app:srcCompat="@drawable/ic_baseline_support_agent_24_notsel"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

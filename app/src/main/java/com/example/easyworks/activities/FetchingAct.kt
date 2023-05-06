@@ -38,6 +38,12 @@ class FetchingAct : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val notifybtn = findViewById<ImageButton>(R.id.notifynotselserv)
+        notifybtn.setOnClickListener {
+            val intent = Intent(this, FetchAllNotifications::class.java)
+            startActivity(intent)
+        }
+
 
         cusRecyclerView = findViewById(R.id.rvCu)
         cusRecyclerView.layoutManager = LinearLayoutManager(this)

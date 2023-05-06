@@ -32,6 +32,7 @@ class CusAdapter (private val cusList : ArrayList<CustomerModel>) : RecyclerView
     override fun onBindViewHolder(holder:ViewHolder, position: Int) {
         val curruntCus = cusList[position]
         holder.tvCusName.text = curruntCus.cusName
+        holder.tvCusR.text = curruntCus.cusReview
     }
 
 
@@ -42,6 +43,7 @@ class CusAdapter (private val cusList : ArrayList<CustomerModel>) : RecyclerView
     class ViewHolder(itemView : View, clickListener:onItemClickListener) : RecyclerView.ViewHolder(itemView){
 
         val tvCusName : TextView = itemView.findViewById(R.id.tvCusName)
+        val tvCusR : TextView = itemView.findViewById(R.id.tvCusR)
 
         init{
             itemView.setOnClickListener {
