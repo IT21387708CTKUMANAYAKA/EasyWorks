@@ -2,6 +2,7 @@ package com.example.easyworks.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -51,13 +52,26 @@ private fun saveCustomerData() {
 
     if (cusName.isEmpty()) {
         etCusName.error = "Please enter name"
+        etCusName.requestFocus()
+        return
     }
+
     if (cusEmail.isEmpty()) {
         etCusEmail.error = "Please enter email"
+        etCusEmail.requestFocus()
+        return
+    }
+
+    if (!Patterns.EMAIL_ADDRESS.matcher(cusEmail).matches()) {
+        etCusEmail.error = "Please enter a valid email address"
+        etCusEmail.requestFocus()
+        return
     }
 
     if (cusReview.isEmpty()) {
         etCusReview.error = "Please enter review"
+        etCusReview.requestFocus()
+        return
     }
 
     val cusId = dbRef.push().key!! //generate customer id
